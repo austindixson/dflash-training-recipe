@@ -18,3 +18,18 @@ Serving costs and latency can dominate LLM production workloads.
 
 ## Limitations
 Results vary by model family, hardware, and decoding parameters.
+
+## Visual Overview
+
+![Install flow](docs/assets/install-flow.png)
+
+![Setup flow](docs/assets/setup-flow.png)
+
+To regenerate these visuals:
+
+```bash
+cd docs/remotion
+npm install
+npm run render:all
+```
+
