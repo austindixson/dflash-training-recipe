@@ -4,49 +4,52 @@ Training and evaluation recipe for DFlash draft models used in speculative decod
 
 ## Installation
 
-2) Clone and enter the repo
 ```bash
-git clone <repo-url>
-cd <repo-name>
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+pip install transformers datasets accelerate bitsandbytes trl peft
 ```
 
 ## Quick Start
 
 ```bash
-# See repository-specific setup below
+# Primary guide:
+less DFLASH_TRAINING_RECIPE.md
+
+# Validate tokenizer/config compatibility before run:
+python -c "from transformers import AutoTokenizer; print('ok')"
 ```
 
 ## Usage Examples
 
-- Run default training workflow
+- Use the Gemma4 DFlash recipe as source of truth
 ```bash
-python scripts/train.py  # adjust config path
+less DFLASH_TRAINING_RECIPE.md
+```
+
+- Run training once script/config are prepared
+```bash
+python train_gemma4_dflash.py --help
+```
+
+- Serve/check merged checkpoint (example path)
+```bash
+python -m sglang.launch_server --help
 ```
 
 ## Implementation Overview
 
-This repository is implemented primarily in **Mixed** and organized around explicit runtime entrypoints plus supporting modules.
-
-### Key Directories
-
-- `.github/`
-- `docs/`
-
-### Key Files
-
-- `README.md`
-- `LICENSE`
-- `.github/workflows/ci.yml`
-
-### Entrypoints
-
+- `DFLASH_TRAINING_RECIPE.md` is the canonical end-to-end method and hyperparameter reference.
+- `DFLASH_README.md` adds supporting context and rationale around the recipe.
+- `.github/workflows/ci.yml` enforces basic markdown/repo quality checks.
+- `docs/` holds generated visuals and publication assets.
 
 ## Troubleshooting
 
-- If startup fails, run the primary command with verbose flags and capture stderr logs.
-- If dependencies conflict, remove lock artifacts and reinstall in a clean shell.
-- If tests fail intermittently, run a single test target first, then full suite.
-- Ensure environment variables are loaded before running build/train commands.
+- If memory errors occur, reduce batch size and sequence length before changing optimizer settings.
+- If speculative decoding quality regresses, re-check teacher/student tokenizer and config parity.
+- If inference server startup fails, verify CUDA, driver, and framework version compatibility.
 
 ## Visual Overview
 
