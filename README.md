@@ -2,6 +2,48 @@
 
 Training and evaluation recipe for DFlash draft models used in speculative decoding pipelines.
 
+## Presentation Framework (Proven README Pattern)
+
+### TL;DR
+End-to-end DFlash training/evaluation methodology for speculative decoding draft models.
+
+### Why this project
+- Solves a concrete workflow problem with reproducible command paths.
+- Prioritizes operator reliability over demo-only output.
+- Structured for practical use, not just conceptual documentation.
+
+### Quick Start
+```bash
+less DFLASH_TRAINING_RECIPE.md
+```
+
+### Installation
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
+pip install transformers datasets accelerate bitsandbytes trl peft
+```
+
+### Usage Examples
+```bash
+less DFLASH_TRAINING_RECIPE.md
+python train_gemma4_dflash.py --help
+```
+
+### Architecture at a glance
+- DFLASH_TRAINING_RECIPE.md — canonical method and hyperparameters
+- DFLASH_README.md — context and rationale
+- docs/ — publication assets and visuals
+
+### Troubleshooting
+- If quality regresses, re-check tokenizer/config parity between teacher and draft models.
+- If VRAM blows up, tune batch/sequence before optimizer-level changes.
+
+### Project status
+Refine reproducibility and benchmark reporting for production-grade adoption.
+
+
 ## Installation
 
 ```bash
@@ -72,3 +114,11 @@ Serving costs and latency can dominate LLM production workloads.
 
 ## Limitations
 Results vary by model family, hardware, and decoding parameters.
+
+## Contributing
+
+Contributions are welcome. Open an issue first for significant changes, then submit a focused PR with reproducible validation steps.
+
+## License
+
+See `LICENSE` for terms.
