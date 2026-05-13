@@ -1,1 +1,34 @@
-<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg"><rect width="1600" height="900" fill="#0A1B2E"/><text x="100" y="120" fill="#DBEAFE" font-size="60" font-family="Inter" font-weight="700">dflash-training-recipe</text><text x="100" y="175" fill="#93C5FD" font-size="28" font-family="Inter">Visual Overview</text><rect x="100" y="230" width="1400" height="560" rx="24" fill="#0F2742" stroke="#2563EB"/><line x1="100" y1="410" x2="1500" y2="410" stroke="#1D4ED8"/><line x1="560" y1="230" x2="560" y2="790" stroke="#1D4ED8"/><line x1="1000" y1="230" x2="1000" y2="790" stroke="#1D4ED8"/><text x="130" y="290" fill="#BFDBFE" font-size="26" font-family="Inter" font-weight="600">Method</text><text x="590" y="290" fill="#BFDBFE" font-size="26" font-family="Inter" font-weight="600">Execution</text><text x="1030" y="290" fill="#BFDBFE" font-size="26" font-family="Inter" font-weight="600">Validation</text><text x="130" y="350" fill="#93C5FD" font-size="20" font-family="JetBrains Mono">Runtime: training-spec repository</text><text x="130" y="382" fill="#93C5FD" font-size="20" font-family="JetBrains Mono">Core: DFlash method + eval protocol</text><text x="130" y="414" fill="#93C5FD" font-size="20" font-family="JetBrains Mono">Surface: reproducible recipe documentation</text><text x="590" y="350" fill="#A5F3FC" font-size="21" font-family="Inter">- prepare teacher/student config parity</text><text x="590" y="386" fill="#A5F3FC" font-size="21" font-family="Inter">- train draft model with constrained memory</text><text x="590" y="422" fill="#A5F3FC" font-size="21" font-family="Inter">- evaluate latency/quality tradeoff</text><text x="1030" y="350" fill="#FDE68A" font-size="21" font-family="Inter">- benchmark downstream decode speedups</text><text x="1030" y="386" fill="#FDE68A" font-size="21" font-family="Inter">- confirm answer-quality regression bounds</text><text x="1030" y="422" fill="#FDE68A" font-size="21" font-family="Inter">- document reproducible command matrix</text></svg>
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DFlash Training Recipe visual overview">
+<defs>
+  <clipPath id="clipL"><rect x="130" y="340" width="380" height="370" rx="12"/></clipPath>
+  <clipPath id="clipM"><rect x="610" y="340" width="380" height="370" rx="12"/></clipPath>
+  <clipPath id="clipR"><rect x="1090" y="340" width="380" height="370" rx="12"/></clipPath>
+</defs>
+<rect width="1600" height="900" fill="#0A1B2E"/>
+<text x="100" y="118" fill="#F8FAFC" font-size="58" font-family="Inter, Segoe UI, Arial" font-weight="700">DFlash Training Recipe</text>
+<text x="100" y="170" fill="#94A3B8" font-size="28" font-family="Inter, Segoe UI, Arial">Visual Overview</text>
+<line x1="100" y1="205" x2="1500" y2="205" stroke="#2563EB" stroke-width="3"/>
+<rect x="100" y="250" width="1400" height="560" rx="24" fill="#101826" stroke="#334155"/>
+<rect x="130" y="300" width="380" height="470" rx="18" fill="#131E2E" stroke="#243447"/>
+<rect x="610" y="300" width="380" height="470" rx="18" fill="#131E2E" stroke="#243447"/>
+<rect x="1090" y="300" width="380" height="470" rx="18" fill="#131E2E" stroke="#243447"/>
+<text x="158" y="350" fill="#E2E8F0" font-size="28" font-family="Inter, Segoe UI, Arial" font-weight="600">Architecture</text>
+<text x="638" y="350" fill="#E2E8F0" font-size="28" font-family="Inter, Segoe UI, Arial" font-weight="600">Execution</text>
+<text x="1118" y="350" fill="#E2E8F0" font-size="28" font-family="Inter, Segoe UI, Arial" font-weight="600">Operational Notes</text>
+<g clip-path="url(#clipL)">
+  <text x="158" y="395" fill="#93C5FD" font-size="20" font-family="JetBrains Mono, Menlo, monospace">• Type: method repository</text>
+  <text x="158" y="432" fill="#93C5FD" font-size="20" font-family="JetBrains Mono, Menlo, monospace">• Core: draft-model recipe</text>
+  <text x="158" y="469" fill="#93C5FD" font-size="20" font-family="JetBrains Mono, Menlo, monospace">• Focus: speed/quality balance</text>
+</g>
+<g clip-path="url(#clipM)">
+  <text x="638" y="395" fill="#A7F3D0" font-size="21" font-family="Inter, Segoe UI, Arial">1. Install deps and verify env</text>
+  <text x="638" y="435" fill="#A7F3D0" font-size="21" font-family="Inter, Segoe UI, Arial">2. Run primary command path</text>
+  <text x="638" y="475" fill="#A7F3D0" font-size="21" font-family="Inter, Segoe UI, Arial">3. Validate via tests/checks</text>
+  <text x="638" y="515" fill="#A7F3D0" font-size="21" font-family="Inter, Segoe UI, Arial">4. Capture logs + iterate</text>
+</g>
+<g clip-path="url(#clipR)">
+  <text x="1118" y="395" fill="#FDE68A" font-size="21" font-family="Inter, Segoe UI, Arial">- keep commands reproducible</text>
+  <text x="1118" y="435" fill="#FDE68A" font-size="21" font-family="Inter, Segoe UI, Arial">- validate from clean session</text>
+  <text x="1118" y="475" fill="#FDE68A" font-size="21" font-family="Inter, Segoe UI, Arial">- document real failure modes</text>
+</g>
+</svg>
